@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Entries from "./components/AddEntry";
+import AddEntry from "./components/AddEntry";
 
 const App = () => {
   const [entries, setEntries] = useState([]);
