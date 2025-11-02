@@ -1,8 +1,19 @@
-const EntryCard = ({ entry, onSelect }) => (
+const EntryCard = ({ entry, onSelect, onDelete }) => (
   <div
     onClick={() => onSelect(entry)}
     className="border rounded-md p-3 cursor-pointer hover:bg-gray-300 transition flex gap-3"
   >
+     <button
+      onClick={(e) => {
+        e.stopPropagation() // prevent modal opening when deleting
+        onDelete(entry.id)
+      }}
+      className="absolute top-2 right-2 text-red-600 hover:text-red-800 text-sm font-bold"
+      title="Delete Entry"
+    >
+      🗑️
+    </button>
+    
     {entry.image && (
       <img
         src={entry.image}

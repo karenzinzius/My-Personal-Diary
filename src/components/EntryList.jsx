@@ -1,6 +1,6 @@
 import EntryCard from "./EntryCard"
 
-const EntryList = ({ entries, onSelect }) => {
+const EntryList = ({ entries, onSelect, onDelete }) => {
   if (entries.length === 0) {
     return <p className="text-gray-500 text-center">No entries yet. Add your first one!</p>
   }
@@ -12,7 +12,7 @@ const EntryList = ({ entries, onSelect }) => {
   return (
     <div className="flex flex-col gap-3">
       {sortedEntries.map((entry) => (
-        <EntryCard key={entry.id} entry={entry} onSelect={onSelect} />
+        <EntryCard key={entry.id} entry={entry} onSelect={onSelect} onDelete={onDelete} />
       ))}
     </div>
   )
