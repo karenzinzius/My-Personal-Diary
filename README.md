@@ -5,8 +5,12 @@ The application allows users to write, view, and manage personal diary entries i
 
 This project was created as a learning project to practice modern frontend development, component structure, and state management.
 
-## Project Structure
+## Live Demo
+https://daily-thoughts-61xk.onrender.com
 
+
+## Project Structure
+```
 .
 ├── src/
 │   ├── components/
@@ -21,7 +25,7 @@ This project was created as a learning project to practice modern frontend devel
 ├── eslint.config.js
 ├── .gitignore
 └── README.md
-
+```
 ## Technologies Used
 
 - React
